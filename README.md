@@ -12,4 +12,7 @@ from a terminal:
 
 `npm start`
 
+*For instructions on installing NodeJS and npm, please see: [https://nodejs.org/en/](https://nodejs.org/en/) and [https://www.npmjs.com/](https://www.npmjs.com/)*
+
+
 visit [http://localhost:8000](http://localhost:8000) in your browser
