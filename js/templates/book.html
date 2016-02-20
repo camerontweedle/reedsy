@@ -1,0 +1,44 @@
+<div class="book-header">
+  <div class="container">
+    <img class="pull-right" ng-src="{{ vm.book.cover }}" alt="{{ vm.book.name}} cover art" width="200">
+    <h2 class="book-listing-title">{{ vm.book.name }}</h2>
+    <h4 class="author-title">By {{ vm.book.author.name }} <small>{{ vm.book.published | relativeDateFilter }}</small></h4>
+    <p>{{ vm.book.description }}</p>
+    <br>
+    <p>Categories:
+      <a href="#/?category={{ vm.book.genre.category }}">{{ vm.book.genre.category }}</a>,
+      <a href="#/?genre={{ vm.book.genre.name }}">{{ vm.book.genre.name }}</a>
+    </p>
+    <p>
+      <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{ vm.book.likes }}
+    </p>
+  </div>
+</div>
+<div class="book-intro">
+  <div class="container">
+    <h1><small>Introduction</small></h1>
+    <p ng-repeat="introText in vm.book.introduction" class="lead">
+      {{ introText.content }}
+    </p>
+  </div>
+</div>
+<div class="container">
+  <hr>
+</div>
+<div class="book-author centered">
+  <div class="container">
+    <img class="img-circle" ng-src="{{ vm.book.author.avatar }}" alt="{{ vm.book.author.name }} avatar">
+    <h3>Written by {{ vm.book.author.name }}</h3>
+  </div>
+</div>
+<div class="book-recommendations">
+  <div class="container">
+    <div class="centered">
+      <h3>Similar reading</h3>
+      <p>If you liked this book, we recommend you check out these emerging titles.</p>
+      <br>
+    </div>
+    <book-listing ng-repeat="book in vm.recommended_books | orderBy: book.likes | limitTo: 3" info="book"></book-listing>
+    <book-listing ng-repeat="book in vm.additional_books | orderBy: book.likes | limitTo: 3 - vm.recommended_books.length" info="book"></book-listing>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+body {
+  padding-top: 50px;
+}
+
+.book-listing-title {
+  min-height: 60px;
+}
+
+.book-header, .book-recommendations {
+  background-color: #eee;
+  padding: 50px;
+}
+
+.book-author {
+  padding: 50px;
+}
+
+.author-title {
+  margin-bottom: 50px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.filter-form {
+  margin: 20px;
+}
+
+.filter-select {
+  width: 200px !important;
+}
+
+.filter-input {
+  width: 300px !important;
+}

@@ -1,0 +1,10 @@
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <a href="#/book/{{ bookInfo.id }}"><img ng-src="{{ bookInfo.cover }}" alt="{{ bookInfo.name }} cover art"></a>
+    <div class="caption">
+      <a href="#/book/{{ bookInfo.id }}"><h3 class="book-listing-title">{{ bookInfo.name }}</h3></a>
+      <h5>By {{ bookInfo.author.name }}</h5>
+      <p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{ bookInfo.likes }} <span class="pull-right">{{ bookInfo.published | relativeDateFilter }}</span></p>
+    </div>
+  </div>
+</div>
