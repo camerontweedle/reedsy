@@ -10,4 +10,6 @@ from a terminal:
 
 `npm install`
 
+`npm start`
+
 visit [http://localhost:8000](http://localhost:8000) in your browser
